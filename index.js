@@ -13,7 +13,7 @@ const app = express()
 
 app.use(cookieParser());
 const corsOpts = {
-    origin: 'http://localhost:3000',
+    origin: 'https://ame-writes.onrender.com/',
     methods: [
         'GET',
         'POST',
