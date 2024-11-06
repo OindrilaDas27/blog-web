@@ -44,7 +44,7 @@ exports.loginUser = async (req, res) => {
             const token = await generateToken({ userId: user._id })
             user.token = token;
             delete user.password
-            res.cookie('token', token, { domain: "https://ame-writes.onrender.com/", httpOnly: true, sameSite: 'None', secure: true });
+            res.cookie('token', token, { domain: "https://ame-writes.onrender.com", httpOnly: true, sameSite: 'None', secure: true });
             res.status(200).json(user)
         }
         
